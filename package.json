@@ -1,6 +1,6 @@
 {
   "name": "vue-floater",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Float label pattern for Vue.js",
   "main": "dist/vue-floater.js",
   "repository": "git@github.com:bkzl/vue-floater.git",
