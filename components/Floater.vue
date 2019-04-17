@@ -1,5 +1,5 @@
 <template>
-  <div class="vfl-has-label">
+  <div class="vfl-has-label" :class="wrapperClassObject">
     <label class="vfl-label" :class="classObject" :for="inputId">
       {{ floater }}
     </label>
@@ -82,14 +82,6 @@ export default {
       this.isFocused =
         e.target === document.activeElement &&
         (this.activeOnFocus || this.isActive)
-
-      if (this.activeOnFocus) {
-        if (this.isFocused) {
-          e.target.placeholder = ''
-        } else {
-          e.target.placeholder = this.floater
-        }
-      }
     }
   },
   computed: {
@@ -103,8 +95,13 @@ export default {
         'vfl-label-active': this.activeOnFocus && this.isFocused
       }
     },
+    wrapperClassObject () {
+      return {
+        'vfl-active': this.activeOnFocus && this.isFocused
+      }
+    },
     formElType () {
-      return this.formEl ? this.formEl.tagName.toLowerCase() : ''
+      return this.formEl ? this.formEl.tagName.toLowerCase() : '';
     },
     floater () {
       if (this.label) return this.label
@@ -117,7 +114,7 @@ export default {
           return this.formEl.querySelector('option[disabled][selected]')
             .innerHTML
         default:
-          return ''
+          return '';
       }
     }
   }
@@ -150,6 +147,22 @@ export default {
   top: -1.3em;
   pointer-events: all;
   opacity: 1;
+}
+
+.vfl-active input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.vfl-active input:-moz-placeholder {
+  color: transparent;
+}
+
+.vfl-active input::-moz-placeholder {
+  color: transparent;
+}
+
+.vfl-active input:-ms-input-placeholder {
+  color: transparent;
 }
 
 .vfl-label-on-focus {
