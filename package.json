@@ -3,11 +3,20 @@
   "version": "1.0.2",
   "description": "Float label pattern for Vue.js",
   "main": "dist/vue-floater.js",
-  "repository": "git@github.com:bkzl/vue-floater.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urbantrout/vue-floater.git"
+  },
   "author": "Harald Atteneder <harald@urbantrout.io>",
   "contributors": [
-    "Bartlomiej Kozal <bkzl@me.com>"
+    {
+      "name": "Bartlomiej Kozal",
+      "email": "bkzl@me.com"
+    }
   ],
+  "bugs": {
+    "url": "https://github.com/urbantrout/vue-floater/issues"
+  },
   "license": "MIT",
   "scripts": {
     "start": "npm run demo",
