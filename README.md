@@ -15,16 +15,16 @@ with CSS.
 
 ## Installation
 
-### yarn / npm
+### npm / yarn
 
-Install package using `yarn` or `npm`:
+Install package using `npm` or `yarn`:
 
 ```sh
-$ yarn add vue-floater
+$ npm install --save vue-floater
 
 # or
 
-$ npm install --save vue-floater
+$ yarn add vue-floater
 ```
 
 #### Global
@@ -250,13 +250,13 @@ export default {
 2.  Install dependencies:
 
     ```sh
-    $ yarn install
+    $ npm install
     ```
 
 3.  Start development:
 
     ```sh
-    $ yarn start
+    $ npm start
     ```
 
 ---
