@@ -62,22 +62,6 @@ export default {
 </script>
 ```
 
-### CDN
-
-Load the script file from CDN:
-
-```html
-<div id="root"></div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
-<script src="//unpkg.com/vue-floater"></script>
-<script>
-  new Vue({
-    el: '#root',
-    template: '<floater>...</floater>'
-  })
-</script>
-```
-
 ## Usage
 
 Wrap input, textarea or select with `<floater>`:
