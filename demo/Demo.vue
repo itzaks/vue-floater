@@ -1,31 +1,31 @@
 <template>
   <div>
     <div class="container">
-      <float-label>
+      <floater>
         <input type="text" placeholder="First name" />
-      </float-label>
+      </floater>
 
-      <float-label :active-on-focus="true">
+      <floater :active-on-focus="true">
         <input type="text" placeholder="Active on Focus" />
-      </float-label>
+      </floater>
 
-      <float-label>
+      <floater>
         <input type="email" placeholder="Email" v-model="email" />
-      </float-label>
+      </floater>
 
-      <float-label label="Overridden label">
+      <floater label="Overridden label">
         <input type="password" placeholder="Password" />
-      </float-label>
+      </floater>
 
-      <float-label :on="isActive">
+      <floater :on="isActive">
         <input type="text" placeholder="Inactive" />
-      </float-label>
+      </floater>
 
-      <float-label>
+      <floater>
         <textarea placeholder="Comment"></textarea>
-      </float-label>
+      </floater>
 
-      <float-label :dispatch="false">
+      <floater :dispatch="false">
         <select>
           <option disabled selected>Framework</option>
           <option>Vue</option>
@@ -33,24 +33,33 @@
           <option>Angular</option>
           <option>Ember</option>
         </select>
-      </float-label>
+      </floater>
 
-      <float-label label="Version">
+      <floater label="Version">
         <select v-model="version">
           <option v-for="option in options" :value="option.value">
             {{ option.text }}
           </option>
         </select>
-      </float-label>
+      </floater>
 
-      <float-label fixed>
+      <floater fixed>
         <input type="text" placeholder="Fixed" />
-      </float-label>
+      </floater>
 
       <div class="example">
-        <float-label>
+        <floater>
           <input type="text" placeholder="Website" />
-        </float-label>
+        </floater>
+      </div>
+      <div>
+        Forked from
+        <a
+          href="https://github.com/brtjkzl/vue-floater"
+          target="_blank"
+          rel="noopener"
+          >brtjkzl/vue-floater</a
+        >
       </div>
     </div>
   </div>
@@ -59,9 +68,9 @@
 <script>
 export default {
   name: 'demo',
-  data () {
+  data() {
     return {
-      email: 'bkzl@me.com',
+      email: 'harald@urbantrout.io',
       version: 'beta',
       options: [
         { value: 'alpha', text: 'Alpha' },
@@ -71,7 +80,7 @@ export default {
     }
   },
   computed: {
-    isActive () {
+    isActive() {
       return false
     }
   }

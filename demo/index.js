@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import VueFloatLabel from '../vue-float-label'
+import VueFloater from '../vue-floater'
 import Demo from './Demo'
 
-Vue.use(VueFloatLabel)
+Vue.use(VueFloater)
 
 new Vue({
   el: '#app',

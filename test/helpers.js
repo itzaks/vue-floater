@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import FloatLabel from 'components/FloatLabel'
+import floater from 'components/Floater'
 
 export const ctorInput = (props={}) => {
   return new Vue({
-    components: { FloatLabel },
+    components: { floater },
     render: h => {
-      return h('float-label', {
+      return h('floater', {
         props
       }, [
         h('input', {
@@ -21,9 +21,9 @@ export const ctorInput = (props={}) => {
 
 export const ctorTextArea = () => {
   return new Vue({
-    components: { FloatLabel },
+    components: { floater },
     render: h => {
-      return h('float-label', [
+      return h('floater', [
         h('textarea', {
           attrs: {
             placeholder: 'Comment'
@@ -36,9 +36,9 @@ export const ctorTextArea = () => {
 
 export const ctorSelect = () => {
   return new Vue({
-    components: { FloatLabel },
+    components: { floater },
     render: h => {
-      return h('float-label', [
+      return h('floater', [
         h('select', [
           h('option', {
             attrs: {

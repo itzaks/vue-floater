@@ -1,11 +1,11 @@
 var path = require('path')
 
 module.exports = {
-  entry: './vue-float-label.js',
+  entry: './vue-floater.js',
   output: {
     path: path.join(__dirname, './dist'),
-    filename: 'vue-float-label.js',
-    library: 'vueFloatLabel',
+    filename: 'vue-floater.js',
+    library: 'VueFloater',
     libraryTarget: 'umd'
   },
   resolve: {

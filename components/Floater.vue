@@ -1,7 +1,7 @@
 <template>
   <div class="vfl-has-label">
     <label class="vfl-label" :class="classObject" :for="inputId">
-      {{ floatLabel }}
+      {{ floater }}
     </label>
     <slot></slot>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'float-label',
+  name: 'floater',
   props: {
     on: {
       type: Boolean,
@@ -87,7 +87,7 @@ export default {
         if (this.isFocused) {
           e.target.placeholder = ''
         } else {
-          e.target.placeholder = this.floatLabel
+          e.target.placeholder = this.floater
         }
       }
     }
@@ -106,7 +106,7 @@ export default {
     formElType () {
       return this.formEl ? this.formEl.tagName.toLowerCase() : ''
     },
-    floatLabel () {
+    floater () {
       if (this.label) return this.label
 
       switch (this.formElType) {

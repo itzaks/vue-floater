@@ -1,14 +1,16 @@
-# vue-float-label
+# vue-floater
+
+>  This is a fork of [brtjkzl/vue-floater](https://github.com/brtjkzl/vue-floater)
 
 Float label pattern for Vue.js. Cross-browser compatible and easy to customize
 with CSS.
 
-![intro](https://github.com/bkzl/vue-float-label/raw/master/demo/intro.gif)
+![intro](https://github.com/urbantrout/vue-floater/raw/master/demo/intro.gif)
 
 ```html
-<float-label>
+<floater>
   <input type="text" placeholder="Label">
-</float-label>
+</floater>
 ```
 
 ## Installation
@@ -18,11 +20,11 @@ with CSS.
 Install package using `yarn` or `npm`:
 
 ```sh
-$ yarn add vue-float-label
+$ yarn add vue-floater
 
 # or
 
-$ npm install --save vue-float-label
+$ npm install --save vue-floater
 ```
 
 #### Global
@@ -31,12 +33,12 @@ Load the plugin by calling `Vue.use()`:
 
 ```js
 import Vue from "vue";
-import VueFloatLabel from "vue-float-label";
+import VueFloater from "vue-floater";
 
-Vue.use(VueFloatLabel);
+Vue.use(VueFloater);
 ```
 
-Now you have access in your templates to the `<float-label>` component.
+Now you have access in your templates to the `<floater>` component.
 
 #### Local
 
@@ -44,17 +46,17 @@ You may prefer to explicitly import the plugin and use it inside your components
 
 ```vue
 <template>
-  <float-label>
+  <floater>
     ...
-  </float-label>
+  </floater>
 </template>
 
 <script>
-import FloatLabel from "vue-float-label/components/FloatLabel";
+import floater from "vue-floater/components/Floater";
 
 export default {
   components: {
-    FloatLabel
+    floater
   }
 };
 </script>
@@ -67,29 +69,29 @@ Load the script file from CDN:
 ```html
 <div id="root"></div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
-<script src="//unpkg.com/vue-float-label"></script>
+<script src="//unpkg.com/vue-floater"></script>
 <script>
   new Vue({
     el: '#root',
-    template: '<float-label>...</float-label>'
+    template: '<floater>...</floater>'
   })
 </script>
 ```
 
 ## Usage
 
-Wrap input, textarea or select with `<float-label>`:
+Wrap input, textarea or select with `<floater>`:
 
 ```html
-<float-label>
+<floater>
   <input type="email" placeholder="E-mail">
-</float-label>
+</floater>
 
-<float-label>
+<floater>
   <textarea placeholder="Comment"></textarea>
-</float-label>
+</floater>
 
-<float-label :dispatch="false">
+<floater :dispatch="false">
   <select>
     <option disabled selected>Framework</option>
     <option>Vue</option>
@@ -97,10 +99,10 @@ Wrap input, textarea or select with `<float-label>`:
     <option>Angular</option>
     <option>Ember</option>
   </select>
-</float-label>
+</floater>
 ```
 
-See more examples at [Demo.vue](https://github.com/bkzl/vue-float-label/blob/master/demo/Demo.vue).
+See more examples at [Demo.vue](https://github.com/urbantrout/vue-floater/blob/master/demo/Demo.vue).
 
 ## Customization
 
@@ -109,7 +111,7 @@ See more examples at [Demo.vue](https://github.com/bkzl/vue-float-label/blob/mas
 Style `.vfl-label`, `.vfl-label-on-input` and `.vfl-label-on-focus`
 to meet your design requirements:
 
-![example](https://github.com/bkzl/vue-float-label/raw/master/demo/example.gif)
+![example](https://github.com/urbantrout/vue-floater/raw/master/demo/example.gif)
 
 ```css
 .vfl-label {
@@ -143,9 +145,9 @@ Set `:on` prop to add an additional condition for label activation:
 
 ```vue
 <template>
-  <float-label :on="isActive">
+  <floater :on="isActive">
     <input type="text" placeholder="Inactive">
-  </float-label>
+  </floater>
 </template>
 
 <script>
@@ -156,7 +158,7 @@ export default {
     }
   },
   components: {
-    FloatLabel
+    floater
   }
 };
 </script>
@@ -166,20 +168,20 @@ Set `:label` prop to override `placeholder` attribute for input/textarea or
 `option[disabled][selected]` for select:
 
 ```html
-<float-label label="Last name">
+<floater label="Last name">
   <input type="text" placeholder="Surname">
-</float-label>
+</floater>
 ```
 
 ```vue
 <template>
-  <float-label label="Version">
+  <floater label="Version">
     <select v-model="version">
       <option v-for="option in options" :value="option.value">
         {{ option.text }}
       </option>
     </select>
-  </float-label>
+  </floater>
 </template>
 
 <script>
@@ -195,7 +197,7 @@ export default {
     };
   },
   components: {
-    FloatLabel
+    floater
   }
 };
 </script>
@@ -205,9 +207,9 @@ Set `:fixed` to `true` to make label permanently active:
 
 ```vue
 <template>
-  <float-label fixed>
+  <floater fixed>
     <input type="text" placeholder="Fixed">
-  </float-label>
+  </floater>
 </template>
 ```
 
@@ -218,9 +220,9 @@ _By default it's set to true to activate label when form element has value._
 
 ```vue
 <template>
-  <float-label :dispatch="false">
+  <floater :dispatch="false">
     <input type="email" placeholder="Email" v-model="email">
-  </float-label>
+  </floater>
 </template>
 
 <script>
@@ -231,7 +233,7 @@ export default {
     };
   },
   components: {
-    FloatLabel
+    floater
   }
 };
 </script>
@@ -242,7 +244,7 @@ export default {
 1.  Clone the repository:
 
     ```sh
-    $ git clone git@github.com:bkzl/vue-float-label.git
+    $ git clone git@github.com:urbantrout/vue-floater.git
     ```
 
 2.  Install dependencies:
@@ -259,4 +261,4 @@ export default {
 
 ---
 
-Code is open sourced [on GitHub](https://github.com/bkzl/vue-float-label). Up to date changelog is available under [the releases section](https://github.com/bkzl/vue-float-label/releases).
+Code is open sourced [on GitHub](https://github.com/urbantrout/vue-floater). Up to date changelog is available under [the releases section](https://github.com/urbantrout/vue-floater/releases).

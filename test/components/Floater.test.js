@@ -1,9 +1,9 @@
 import { ctorInput, ctorTextArea, ctorSelect } from '../helpers'
 
-test('floatLabel', () => {
-  expect(ctorInput().floatLabel).toEqual('Name')
-  expect(ctorTextArea().floatLabel).toEqual('Comment')
-  expect(ctorSelect().floatLabel).toEqual('Framework')
+test('floater', () => {
+  expect(ctorInput().floater).toEqual('Name')
+  expect(ctorTextArea().floater).toEqual('Comment')
+  expect(ctorSelect().floater).toEqual('Framework')
 })
 
 test('formEl', () => {
@@ -82,7 +82,7 @@ describe('updateIsFocused', () => {
 })
 
 test(':label', () => {
-  expect(ctorInput({ label: 'Foobar' }).floatLabel).toEqual('Foobar')
+  expect(ctorInput({ label: 'Foobar' }).floater).toEqual('Foobar')
 })
 
 test(':fixed', () => {

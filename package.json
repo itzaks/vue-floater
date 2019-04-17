@@ -1,22 +1,25 @@
 {
-  "name": "vue-float-label",
-  "version": "1.6.1",
+  "name": "vue-floater",
+  "version": "1.0.0",
   "description": "Float label pattern for Vue.js",
-  "main": "dist/vue-float-label.js",
-  "repository": "git@github.com:bkzl/vue-float-label.git",
-  "author": "Bartlomiej Kozal <bkzl@me.com>",
+  "main": "dist/vue-floater.js",
+  "repository": "git@github.com:bkzl/vue-floater.git",
+  "author": "Harald Atteneder <harald@urbantrout.io>",
+  "contributors": [
+    "Bartlomiej Kozal <bkzl@me.com>"
+  ],
   "license": "MIT",
   "scripts": {
     "start": "npm run demo",
     "demo": "vue build demo/index.js -o",
     "test": "jest --silent",
     "lint": "npm run eslint && npm run stylelint",
-    "eslint": "eslint --ext .js,.vue vue-float-label.js components",
+    "eslint": "eslint --ext .js,.vue vue-floater.js components",
     "stylelint": "stylelint 'components/*.vue'",
     "dist": "webpack --config webpack.dist.config.js --optimize-minimize"
   },
   "files": [
-    "vue-float-label.js",
+    "vue-floater.js",
     "components",
     "dist"
   ],
