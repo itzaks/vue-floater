@@ -2,19 +2,23 @@
   <div>
     <div class="container">
       <float-label>
-        <input type="text" placeholder="First name">
+        <input type="text" placeholder="First name" />
+      </float-label>
+
+      <float-label :active-on-focus="true">
+        <input type="text" placeholder="Active on Focus" />
       </float-label>
 
       <float-label>
-        <input type="email" placeholder="Email" v-model="email">
+        <input type="email" placeholder="Email" v-model="email" />
       </float-label>
 
       <float-label label="Overridden label">
-        <input type="password" placeholder="Password">
+        <input type="password" placeholder="Password" />
       </float-label>
 
       <float-label :on="isActive">
-        <input type="text" placeholder="Inactive">
+        <input type="text" placeholder="Inactive" />
       </float-label>
 
       <float-label>
@@ -40,12 +44,12 @@
       </float-label>
 
       <float-label fixed>
-        <input type="text" placeholder="Fixed">
+        <input type="text" placeholder="Fixed" />
       </float-label>
 
       <div class="example">
         <float-label>
-          <input type="text" placeholder="Website">
+          <input type="text" placeholder="Website" />
         </float-label>
       </div>
     </div>
@@ -62,7 +66,7 @@ export default {
       options: [
         { value: 'alpha', text: 'Alpha' },
         { value: 'beta', text: 'Beta' },
-        { value: 'stable', text: 'Stable' },
+        { value: 'stable', text: 'Stable' }
       ]
     }
   },
@@ -90,7 +94,7 @@ select {
   margin-bottom: 2em;
   line-height: 1.15;
   font-size: 14px;
-  padding: .4em;
+  padding: 0.4em;
   width: 100%;
 }
 
@@ -114,7 +118,7 @@ select {
   transition: border 0.2s;
 }
 
-.example .vfl-label-on-focus + input  {
+.example .vfl-label-on-focus + input {
   border-bottom: 2px solid #ff851b;
 }
 </style>

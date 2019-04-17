@@ -30,6 +30,10 @@ export default {
     for: {
       type: String,
       default: null
+    },
+    activeOnFocus: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
@@ -75,7 +79,17 @@ export default {
       this.isActive = e.target.value.length > 0
     },
     updateIsFocused (e) {
-      this.isFocused = e.target === document.activeElement && this.isActive
+      this.isFocused =
+        e.target === document.activeElement &&
+        (this.activeOnFocus || this.isActive)
+
+      if (this.activeOnFocus) {
+        if (this.isFocused) {
+          e.target.placeholder = ''
+        } else {
+          e.target.placeholder = this.floatLabel
+        }
+      }
     }
   },
   computed: {
@@ -85,7 +99,8 @@ export default {
     classObject () {
       return {
         'vfl-label-on-input': this.on && (this.isActive || this.fixed),
-        'vfl-label-on-focus': this.isFocused
+        'vfl-label-on-focus': this.isFocused,
+        'vfl-label-active': this.activeOnFocus && this.isFocused
       }
     },
     formElType () {
@@ -99,7 +114,8 @@ export default {
         case 'textarea':
           return this.formEl.placeholder
         case 'select':
-          return this.formEl.querySelector('option[disabled][selected]').innerHTML
+          return this.formEl.querySelector('option[disabled][selected]')
+            .innerHTML
         default:
           return ''
       }
@@ -129,6 +145,7 @@ export default {
   transition: all 0.2s ease-out;
 }
 
+.vfl-label-active,
 .vfl-label-on-input {
   top: -1.3em;
   pointer-events: all;
