@@ -149,18 +149,22 @@ export default {
   opacity: 1;
 }
 
-.vfl-active input::-webkit-input-placeholder {
+.vfl-active input::-webkit-input-placeholder,
+.vfl-active textarea::-webkit-input-placeholder {
   color: transparent;
 }
 
+.vfl-active textarea:-moz-placeholder,
 .vfl-active input:-moz-placeholder {
   color: transparent;
 }
 
+.vfl-active textarea::-moz-placeholder,
 .vfl-active input::-moz-placeholder {
   color: transparent;
 }
 
+.vfl-active textarea:-ms-input-placeholder,
 .vfl-active input:-ms-input-placeholder {
   color: transparent;
 }

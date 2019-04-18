@@ -25,6 +25,10 @@
         <textarea placeholder="Comment"></textarea>
       </floater>
 
+      <floater :active-on-focus="true">
+        <textarea placeholder="Comment active on focus"></textarea>
+      </floater>
+
       <floater :dispatch="false">
         <select>
           <option disabled selected>Framework</option>
@@ -68,7 +72,7 @@
 <script>
 export default {
   name: 'demo',
-  data() {
+  data () {
     return {
       email: 'harald@urbantrout.io',
       version: 'beta',
@@ -80,7 +84,7 @@ export default {
     }
   },
   computed: {
-    isActive() {
+    isActive () {
       return false
     }
   }
