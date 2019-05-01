@@ -70,8 +70,5 @@
     "vue-cli": "2.8.1",
     "vue-loader": "^11.3.4",
     "webpack": "^2.3.3"
-  },
-  "engines": {
-    "yarn": "YARN NO LONGER USED - use npm instead."
   }
 }
